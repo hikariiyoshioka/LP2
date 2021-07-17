@@ -65,40 +65,44 @@ header .navbar ul li.contact a:hover {
 header .drawer {
   visibility: hidden;
 }
-/*main*/
-.top_inner {
-  display: flex;
-  position: relative;
-  width: 60%;
-  padding-left: 10%;
-  padding-top: 20%;
-}
-.top {
-  height: 50%;
-  background-color: #a2c6ff;
-  padding-top: 5%;
-  padding-bottom: 15%;
-}
-
 .inner {
   text-align: center;
   position: relative;
 }
+/*main*/
+.top_inner {
+  display: block;
+  width: 50%;
+  margin-bottom: 50px;
+  padding-left: 20%;
+  line-height: 1;
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+}
+.top {
+  height: 50%;
+  background-color: #a2c6ff;
+  padding-top: 15%;
+  padding-bottom: 10%;
+}
+
 .font1 p {
-  font-size: 25px;
+  font-size: 20px;
 }
 .font1 {
   z-index: 1;
   font-size: 18px;
 }
 .top_img img {
-  width: 40%;
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  width: 20%;
   height: auto;
 }
-.top_img {
-  position: relative;
-  padding-left: 70%;
-}
+
 .dounload {
   width: 5%;
 }
