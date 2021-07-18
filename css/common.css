@@ -5,6 +5,7 @@ body {
   letter-spacing: 1px;
   word-break: break-all;
   color: #888;
+  width: 100%;
 }
 a {
   text-decoration: none;
@@ -53,7 +54,7 @@ header .navbar ul li a:hover {
   color: #75a9ff;
 }
 header .navbar ul li.contact a {
-  background-color: #75a9ff;
+  background-color: #c5dafc;
   border-radius: 30px;
   color: #fff;
   padding: 10px 25px;
@@ -71,9 +72,10 @@ header .drawer {
 }
 /*main*/
 .top_inner {
-  display: block;
+  display: inline-block;
+  position: relative;
   width: 50%;
-  margin-bottom: 50px;
+  bottom: 5px;
   padding-left: 20%;
   line-height: 1;
   font-size: 24px;
@@ -81,30 +83,47 @@ header .drawer {
   color: #555;
 }
 .top {
-  height: 50%;
   background-color: #a2c6ff;
-  padding-top: 15%;
-  padding-bottom: 10%;
+  margin-top: 5%;
+  padding-top: 10%;
+  padding-bottom: 15%;
 }
 
 .font1 p {
-  font-size: 20px;
+  font-size: 18px;
 }
 .font1 {
   z-index: 1;
-  font-size: 18px;
+  font-size: 12px;
 }
 .top_img img {
   content: "";
   position: absolute;
   top: 20%;
   left: 70%;
-  width: 20%;
+  width: 15%;
   height: auto;
 }
+.top .download {
+  display: inline-flex;
+  margin: 5% 10%;
+}
 
-.dounload {
-  width: 5%;
+.top .download .apple {
+  margin-right: 2%;
+}
+
+.top .download .google {
+  margin-left: 2%;
+}
+
+.top .download .apple img {
+  width: 100%;
+  height: auto;
+}
+.top .download .google img {
+  width: 100%;
+  height: auto;
 }
 /*アプリ紹介*/
 .app_img img {
@@ -143,6 +162,14 @@ header .drawer {
 .feature {
   position: relative;
 }
+.feature_inner {
+  width: 60%;
+  line-height: 1.5;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  padding-bottom: 5%;
+}
 .feature_word::after {
   content: "";
   position: absolute;
@@ -156,14 +183,7 @@ header .drawer {
   z-index: -1;
   padding-top: 10%;
 }
-.feature_inner {
-  width: 60%;
-  line-height: 1.5;
-  margin: 0 auto;
-  color: white;
-  text-align: center;
-  padding-bottom: 5%;
-}
+
 .feature_word h2 {
   font-size: 24px;
 }
@@ -176,9 +196,10 @@ header .drawer {
 
 /*newsについて*/
 .news {
-  padding-left: 20%;
   text-align: center;
   width: 60%;
+  margin: 0 auto;
+  width: 100%;
 }
 .font3 {
   margin-bottom: 30px;
@@ -253,16 +274,16 @@ p {
 .faq .txt ul p strong {
   color: #75a9ff;
 }
-.faq .more {
+.text_btn {
   text-align: center;
   background: #888;
   width: 17%;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 10px 20px;
   border-radius: 10px;
 }
 
-.faq .more a {
+.text_btn a {
   color: #fff;
   font-weight: bold;
 }
@@ -318,7 +339,11 @@ footer {
   margin-top: 10px;
   color: #6f7dad;
 }
-@media screen and (max-width: 720px) {
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  header {
+    height: 50px;
+  }
   header a.logo {
     top: 0;
     padding: 10px;
@@ -329,7 +354,7 @@ footer {
     bottom: 0;
   }
   .app {
-    padding: 50px 50px 100px;
+    padding: 0;
     width: 80%;
   }
 
@@ -342,7 +367,7 @@ footer {
   }
   .app .app_img {
     display: block;
-    width: 60%;
+    width: 20%;
     margin: 100px auto 0;
   }
 
@@ -402,6 +427,7 @@ footer {
     font: 18px;
     line-height: 2;
   }
+  /* nav open */
   body.nav-open header .drawer {
     border-top: 0;
   }
@@ -415,16 +441,80 @@ footer {
     top: 9px;
     transform: rotate(45deg);
   }
-  .app_img {
-    margin-left: 0;
-    padding-left: 0;
-    position: relative;
-    right: 100px;
-    width: 10px;
-    height: auto;
+}
+@media screen and (max-width: 480px) {
+  header a.logo img {
+    width: 110px;
+  }
+  header .drawer {
+    margin-top: 20px;
+  }
+  .font1 p {
+    font-size: 14px;
+  }
+  .font1 small {
+    font-size: 12px;
+  }
+  header {
+    height: 40px;
+  }
+  .top_img {
+    padding-bottom: 20%;
   }
   .top_inner {
-    padding-left: 5%;
-    padding-top: 15%;
+    padding-left: 20px;
+    padding-top: 60px;
+  }
+  .app {
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 80%;
+  }
+  .font5 {
+    font-size: 20px;
+  }
+  .app .descript {
+    margin-bottom: 40px;
+  }
+  .app_all {
+    width: 100%;
+  }
+  .app .app_img {
+    width: 30%;
+    margin-right: 50%;
+  }
+  .app_item .font4 {
+    font-size: 16px;
+  }
+  .app_item .font5 {
+    font-size: 16px;
+  }
+  .feature_word h2 {
+    font-size: 20px;
+  }
+  .feature_inner {
+    font-size: 14px;
+  }
+  .how_list li {
+    font-size: 14px;
+    width: 80%;
+  }
+  .contact_btn .btn {
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 160px;
+  }
+  .faq .txt {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .faq .txt ul p {
+    line-height: 1.3;
+  }
+  .text_btn {
+    margin: 10px auto;
+    padding: 0 auto;
+    width: 160px;
   }
 }
