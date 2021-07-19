@@ -29,7 +29,7 @@ header .logo {
 }
 
 header .logo img {
-  width: 175px;
+  width: 100px;
   height: auto;
   z-index: 2;
 }
@@ -37,11 +37,11 @@ header .navbar ul {
   display: flex;
   float: right;
   position: relative;
-  margin: 15px 0;
+  margin-top: 15px;
 }
 
 header .navbar ul li {
-  margin: 20px 20px 20px;
+  margin: 10px;
 }
 
 header .navbar ul li a {
@@ -84,9 +84,9 @@ header .drawer {
 }
 .top {
   background-color: #a2c6ff;
-  margin-top: 5%;
   padding-top: 10%;
   padding-bottom: 15%;
+  margin-top: 5px;
 }
 
 .font1 p {
@@ -101,12 +101,12 @@ header .drawer {
   position: absolute;
   top: 20%;
   left: 70%;
-  width: 15%;
+  width: 13%;
   height: auto;
 }
 .top .download {
   display: inline-flex;
-  margin: 5% 10%;
+  margin: 5% 0%;
 }
 
 .top .download .apple {
@@ -248,13 +248,10 @@ header .drawer {
   font-weight: bold;
 }
 /*questionについて*/
-.faq .inner {
-  position: relative;
-}
 .faq .txt {
-  width: 80%;
+  width: 55%;
   margin: 0 auto;
-  padding: 60px;
+  padding: 0 10%;
 }
 
 .faq .txt ul li,
@@ -270,7 +267,9 @@ p {
   display: inline-block;
   margin-right: 6px;
 }
-
+.faq .txt ul p {
+  text-align: center;
+}
 .faq .txt ul p strong {
   color: #75a9ff;
 }
@@ -352,6 +351,13 @@ footer {
     display: unset;
     margin-right: 0;
     bottom: 0;
+  }
+  .top_img {
+    padding-bottom: 5%;
+  }
+  .top_inner {
+    padding-left: 20px;
+    padding-top: 60px;
   }
   .app {
     padding: 0;
@@ -441,6 +447,24 @@ footer {
     top: 9px;
     transform: rotate(45deg);
   }
+  .text_btn {
+    margin: 10px auto;
+    padding: 0 auto;
+    width: 160px;
+  }
+  .contact_btn .btn {
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 160px;
+  }
+  .faq .txt {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .faq .txt ul p {
+    line-height: 1.3;
+  }
 }
 @media screen and (max-width: 480px) {
   header a.logo img {
@@ -457,6 +481,9 @@ footer {
   }
   header {
     height: 40px;
+  }
+  .top {
+    margin-top: 10px;
   }
   .top_img {
     padding-bottom: 20%;
